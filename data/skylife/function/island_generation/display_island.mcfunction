@@ -19,3 +19,4 @@
 # - Header is not set in stone, i didnt know what you guys wanted to do for that, so i just did what i normally do
 
 $particle minecraft:crit $(x) -56 $(y) 5 5 5 1 1000 force
+$setblock $(x) -56 $(y) tinted_glass
