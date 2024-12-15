@@ -47,7 +47,7 @@ scoreboard players operation islandY skyLifeMath /= 100 skyLifeMath
 execute store result storage skylife:math temp.islandPosition.x float 1 run scoreboard players get islandX skyLifeMath
 execute store result storage skylife:math temp.islandPosition.y float 1 run scoreboard players get islandY skyLifeMath
 
-function skylife:island_generation/display_island with storage skylife:math temp.islandPosition
+function skylife:island_generation/random_island with storage skylife:math temp.islandPosition
 
 scoreboard players add islandIndex skyLifeMath 1
 execute unless score islandIndex skyLifeMath >= islands skyLifeMath run function skylife:island_generation/create_island_pos
