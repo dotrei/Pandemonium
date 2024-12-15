@@ -42,9 +42,10 @@ scoreboard players operation islandX skyLifeMath *= playerIslandRadius skyLifeMa
 scoreboard players operation islandY skyLifeMath *= playerIslandRadius skyLifeMath
 scoreboard players operation islandX skyLifeMath += translationX skyLifeMath
 scoreboard players operation islandY skyLifeMath += translationY skyLifeMath
-
-execute store result storage skylife:math temp.islandPosition.x float 0.01 run scoreboard players get islandX skyLifeMath
-execute store result storage skylife:math temp.islandPosition.y float 0.01 run scoreboard players get islandY skyLifeMath
+scoreboard players operation islandX skyLifeMath /= 100 skyLifeMath
+scoreboard players operation islandY skyLifeMath /= 100 skyLifeMath
+execute store result storage skylife:math temp.islandPosition.x float 1 run scoreboard players get islandX skyLifeMath
+execute store result storage skylife:math temp.islandPosition.y float 1 run scoreboard players get islandY skyLifeMath
 
 function skylife:island_generation/display_island with storage skylife:math temp.islandPosition
 
